@@ -17,3 +17,13 @@
 4. While implementing QueryInterface, the querying of any interface that UR component supports should be commutative. 
 5. For every successfull queryinterface, internally it shall call Addref, so that the ref count is incremented. 
 6. Class Factory class implements a COM interface called IClassFactory. This class contains 2 methods: CreateInstance and LockServer along with the IUknown methods. 
+
+## Steps for Manual Registration
+1. Open the RegEdit
+2. Open HKEY_CLASSES_ROOT/Wow6432Node
+3. RightClick on CLSID and create a new Key
+4. Paste the CLSID of the Component into the Key with {}
+5. Create a SubKey and name it InprocServer32.
+6. On the right side, set the default value to the path of the DLL including the DLL file.
+7. Create a new String key below default and name it ThreadingModel. Set its value as Apartment.
+8. Refresh the Window. 
