@@ -1,0 +1,57 @@
+// SampleAtlProj.idl : IDL source for SampleAtlProj
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (SampleAtlProj.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(f6ca04e1-aec6-4d29-be00-e528f73f3f8c),
+	pointer_default(unique)
+]
+interface IMyMathComponent : IUnknown
+{
+	HRESULT AddFunc([in] int iVal1, [in] int iVal2, [out] int* iAddValue);
+};
+
+
+[
+	object,
+	uuid(bd458f21-d304-4eb1-a0c4-fcc9d6765d40),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface IAutomationObject : IDispatch
+{
+	[id(1)] HRESULT DisplayMessage([in] BSTR strMessage);
+};
+[
+	uuid(a789f004-6c0d-4a1f-aecc-d5400e78ab9a),
+	version(1.0),
+]
+library SampleAtlProjLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(f19a3069-fe55-42e7-98e1-79c81abd8b00)
+	]
+	coclass MyMathComponent
+	{
+		[default] interface IMyMathComponent;
+	};
+
+	[
+		uuid(8e6013f7-6083-4413-a570-70bdfeacbe98)
+	]
+	coclass AutomationObject
+	{
+		[default] interface IAutomationObject;
+	};
+};
+
+import "shobjidl.idl";
+import "shobjidl.idl";

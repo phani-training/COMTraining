@@ -127,10 +127,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="ComClient.h" />
     <ClInclude Include="ComComponent.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ComClient.cpp" />
+    <ClCompile Include="UsingSmartPointers.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

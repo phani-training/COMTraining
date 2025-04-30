@@ -1,0 +1,25 @@
+HKCR
+{
+	SampleAtlProj.MyMathComponent.1 = s 'MyMathComponent class'
+	{
+		CLSID = s '{f19a3069-fe55-42e7-98e1-79c81abd8b00}'
+	}
+	SampleAtlProj.MyMathComponent = s 'MyMathComponent class'
+	{		
+		CurVer = s 'SampleAtlProj.MyMathComponent.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {f19a3069-fe55-42e7-98e1-79c81abd8b00} = s 'MyMathComponent class'
+		{
+			ProgID = s 'SampleAtlProj.MyMathComponent.1'
+			VersionIndependentProgID = s 'SampleAtlProj.MyMathComponent'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			TypeLib = s '{a789f004-6c0d-4a1f-aecc-d5400e78ab9a}'
+			Version = s '1.0'
+		}
+	}
+}

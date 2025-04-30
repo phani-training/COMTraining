@@ -18,9 +18,12 @@
     <ClInclude Include="ComComponent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ComClient.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ComClient.cpp">
+    <ClCompile Include="UsingSmartPointers.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
