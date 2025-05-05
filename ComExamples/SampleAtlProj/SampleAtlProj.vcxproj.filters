@@ -43,6 +43,12 @@
     <ClInclude Include="AutomationObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LateBindingObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SafeArrayComponent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SampleAtlProj.cpp">
@@ -63,6 +69,12 @@
     <ClCompile Include="AutomationObject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LateBindingObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SafeArrayComponent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="SampleAtlProj.rc">
@@ -80,6 +92,12 @@
       <Filter>Resource Files</Filter>
     </None>
     <None Include="AutomationObject.rgs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="LateBindingObject.rgs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SafeArrayComponent.rgs">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>

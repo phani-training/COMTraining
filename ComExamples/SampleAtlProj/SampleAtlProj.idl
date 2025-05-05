@@ -30,6 +30,29 @@ interface IAutomationObject : IDispatch
 	[id(1)] HRESULT DisplayMessage([in] BSTR strMessage);
 };
 [
+	object,
+	uuid(fbf36eb2-e39e-4a9f-9e43-428703259631),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface ILateBindingObject : IDispatch
+{
+	
+	[id(1), helpstring("SquareOfNumber")] HRESULT SquareOfNumber([in] int nVal, [out] int* nResult);
+};
+[
+	object,
+	uuid(c5b1ee1f-5782-42e8-b504-12120254fbdd),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface ISafeArrayComponent : IDispatch
+{
+	[id(1)] HRESULT AddNumbers([in] VARIANT theArray, [out] LONG* lSum);
+};
+[
 	uuid(a789f004-6c0d-4a1f-aecc-d5400e78ab9a),
 	version(1.0),
 ]
@@ -51,7 +74,23 @@ library SampleAtlProjLib
 	{
 		[default] interface IAutomationObject;
 	};
+	[
+		uuid(8db59fc5-1a14-45fc-a7a3-520d8e31dbbc)
+	]
+	coclass LateBindingObject
+	{
+		[default] interface ILateBindingObject;
+	};
+	[
+		uuid(d23c735d-3837-4722-a548-18614a58aa74)
+	]
+	coclass SafeArrayComponent
+	{
+		[default] interface ISafeArrayComponent;
+	};
 };
 
+import "shobjidl.idl";
+import "shobjidl.idl";
 import "shobjidl.idl";
 import "shobjidl.idl";

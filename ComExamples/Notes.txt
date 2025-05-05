@@ -1,0 +1,23 @@
+1. IDL files is the place where U declare your Interfaces so that it will provide language independent defns for the interfaces and also creates Tlb Files for creating COM Components using Smart pointers. 
+2. COM can be created either as DLL or EXE. DLLs are called Inproc components and EXE are outproc components. 
+3. Once the IDL file is created and compiled using MIDL Compiler, it shall generate certain C files which is used both on the client side as well the server side as includes. They need these files fo obtaining interface definitions and class definitions. 
+4. U can create a new Cpp file where U shall implement UR interfaces into a class.
+
+
+Rules of COM Programming:
+1. All Com methods should return a 32 Bit error code called HRESULT. 
+2. All COM interfaces must directly or indirectly derived from IUnknown. 
+3. All COM methods must be following STD Calling Conventions(Pascal Calling convention).They should decorate their methods with __stdcall. 
+4. While implementing QueryInterface, the querying of any interface that UR component supports should be commutative. 
+5. For every successfull queryinterface, internally it shall call Addref, so that the ref count is incremented. 
+6. Class Factory class implements a COM interface called IClassFactory. This class contains 2 methods: CreateInstance and LockServer along with the IUknown methods. 
+
+IDispatch interface:
+1. If U want COM objects to be invoked thru' late binding as well as vTable binding, then U must implement IDispatch interface. 
+2. IDispatch interface is internally derived from IUnknown. 
+3. Only 1 interface for a COM object can allow IDispatch implementation, which implies that only one interface and its methods can be invoked thru late binding, other interface methods can be invoked only thru vTable binding(CLSID invocation). So it is always recommended to have one component implement one interface. 
+4. The interface which implements IDispatch is also called as DISPINTERFACE and these methods will internally have an ID(int numbers) called DISPIDs.
+5. After implementing the interface, build the project and register the DLL using regsvr32 utility. 
+6. U can now create a Client App that consumes this Component using late binding. 
+7. In the client app, we shall not include any tlb or MIDL generated Files. 
+8. U can get the ProgID from the Registry by looking for the CLSID of the Component and UR progid shall be a subkey inside it. 

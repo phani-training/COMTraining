@@ -217,9 +217,11 @@
     <ClInclude Include="AutomationObject.h" />
     <ClInclude Include="dllmain.h" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="LateBindingObject.h" />
     <ClInclude Include="MyMathComponent.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="SafeArrayComponent.h" />
     <ClInclude Include="SampleAtlProj_i.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
@@ -239,6 +241,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
       </PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="LateBindingObject.cpp" />
     <ClCompile Include="MyMathComponent.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -246,6 +249,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="SafeArrayComponent.cpp" />
     <ClCompile Include="SampleAtlProj.cpp" />
     <ClCompile Include="SampleAtlProj_i.c">
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
@@ -267,7 +271,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="AutomationObject.rgs" />
+    <None Include="LateBindingObject.rgs" />
     <None Include="MyMathComponent.rgs" />
+    <None Include="SafeArrayComponent.rgs" />
     <None Include="SampleAtlProj.def" />
     <None Include="SampleAtlProj.rgs" />
   </ItemGroup>

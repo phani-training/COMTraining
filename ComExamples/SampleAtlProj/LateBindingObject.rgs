@@ -1,0 +1,26 @@
+HKCR
+{
+	SampleAtlProj.LateBindingObject.1 = s 'LateBindingObject class'
+	{
+		CLSID = s '{8db59fc5-1a14-45fc-a7a3-520d8e31dbbc}'
+	}
+	SampleAtlProj.LateBindingObject = s 'LateBindingObject class'
+	{		
+		CurVer = s 'SampleAtlProj.LateBindingObject.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {8db59fc5-1a14-45fc-a7a3-520d8e31dbbc} = s 'LateBindingObject class'
+		{
+			ProgID = s 'SampleAtlProj.LateBindingObject.1'
+			VersionIndependentProgID = s 'SampleAtlProj.LateBindingObject'
+			ForceRemove Programmable
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			TypeLib = s '{a789f004-6c0d-4a1f-aecc-d5400e78ab9a}'
+			Version = s '1.0'
+		}
+	}
+}

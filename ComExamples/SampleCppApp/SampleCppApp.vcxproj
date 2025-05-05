@@ -131,7 +131,7 @@
     <ClInclude Include="ComComponent.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="UsingSmartPointers.cpp" />
+    <ClCompile Include="SafeArrayClient.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

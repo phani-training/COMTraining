@@ -23,7 +23,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="UsingSmartPointers.cpp">
+    <ClCompile Include="SafeArrayClient.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

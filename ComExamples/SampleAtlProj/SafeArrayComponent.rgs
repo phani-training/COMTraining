@@ -1,0 +1,26 @@
+HKCR
+{
+	SampleAtlProj.SafeArrayComponent.1 = s 'SafeArrayComponent class'
+	{
+		CLSID = s '{d23c735d-3837-4722-a548-18614a58aa74}'
+	}
+	SampleAtlProj.SafeArrayComponent = s 'SafeArrayComponent class'
+	{		
+		CurVer = s 'SampleAtlProj.SafeArrayComponent.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {d23c735d-3837-4722-a548-18614a58aa74} = s 'SafeArrayComponent class'
+		{
+			ProgID = s 'SampleAtlProj.SafeArrayComponent.1'
+			VersionIndependentProgID = s 'SampleAtlProj.SafeArrayComponent'
+			ForceRemove Programmable
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			TypeLib = s '{a789f004-6c0d-4a1f-aecc-d5400e78ab9a}'
+			Version = s '1.0'
+		}
+	}
+}
